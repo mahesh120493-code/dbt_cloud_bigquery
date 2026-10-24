@@ -1,0 +1,14 @@
+version: 2
+
+models:
+  - name: transformed_sales_intermediate
+    description: "Transformed sales table"
+    config:
+      materialized: table
+      alias: sales_rpt_intermediate
+    columns:
+      - name: sale_id
+        description: "The primary key for this table"
+        data_tests:
+          - unique
+          - not_null
